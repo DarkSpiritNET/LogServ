@@ -1,0 +1,39 @@
+LogServ ChangeLog
+=============================================================================
+3.0.a4 - Fish (F)
+ - Fix Bug LS-11 make install failure
+
+3.0.a3 - Mark (M)
+ - Bug fixes for segfaults. (M)
+
+3.0.a2 - Mark (M)
+ - Update settings table to a2 compatible format. (M)
+
+3.0.a1 - Mark (M)
+- Add SET options for logdir and savedir. (M)
+- Remove indicator flag for open files. We can use the file descriptor for 
+  this job. (M).
+- Add support for EVENT_EMPTYCHAN so logserv will auto quit channels when all
+  users have left. (M)
+- Add support for channel notices and core side CTCP ACTION parsing. (M)
+- CHANS command is pointless since it requires a sub command so tidy up 
+  command path by promoting the sub commands. (M)
+- Replace file functions with core portable replacements. (M)
+- Split processing code into seperate files. Easier maintainance and allows
+  us to create a template file for use in user submissions of alternative
+  log formats. (M)
+- Replace safe_channame/_irclog_safe with core make_safe_filename call. (M)
+- Port to 3.0 API (M)
+
+1.2 * Mark * 17/2/2003
+- We now try to read nick, user, host and realname so these can be configured more 
+  easily (M)
+- SET interface for nick/user/host/realname added (M)
+- Fix up crash on invalid Channel messages (F)
+
+1.1 * Fish * 17/1/2003
+- Fixed up help text.
+- Fixed a crash when adding the first channel
+
+1.0 - Fish 
+- Initial Release
